@@ -3,13 +3,13 @@ package hello;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Persoana {
+public class Produs {
   private String name;
   private int id;
 
-  public Persoana() {}
+  public Produs() {}
 
-  public Persoana(int id, String name) {
+  public Produs(int id, String name) {
       this.name = name;
       this.id = id;
   }

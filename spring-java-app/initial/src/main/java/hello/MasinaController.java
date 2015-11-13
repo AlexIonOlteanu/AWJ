@@ -13,62 +13,62 @@ import java.util.ArrayList;
 
 
 @RestController
-public class PersoanaController {
-  private List<Persoana> persoane = new ArrayList<Persoana>();
+public class MasinaController {
+  private List<Masina> masini = new ArrayList<Masina>();
 
-  PersoanaController() {
-    Persoana p1 = new Persoana(1, "Ion");
-    Persoana p2 = new Persoana(2, "Pavel");
-    Persoana p3 = new Persoana(3, "Matei");
+  MasinaController() {
+    Masina p1 = new Masina(1, "Toyota");
+    Masina p2 = new Masina(2, "BMW");
+    Masina p3 = new Masina(3, "Bugatti");
 
-    persoane.add(p1);
-    persoane.add(p2);
-    persoane.add(p3);
+    masini.add(p1);
+    masini.add(p2);
+    masini.add(p3);
   }
 
-  @RequestMapping(value="/persoana", method = RequestMethod.GET)
-  public List<Persoana> index() {
-    return this.persoane;
+  @RequestMapping(value="/Masina", method = RequestMethod.GET)
+  public List<Masina> index() {
+    return this.masini;
   }
 
-  @RequestMapping(value="/persoana/{id}", method = RequestMethod.GET)
+  @RequestMapping(value="/Masina/{id}", method = RequestMethod.GET)
   public ResponseEntity show(@PathVariable("id") int id) {
-    for(Persoana p : this.persoane) {
+    for(Masina p : this.masini) {
       if(p.getId() == id) {
-        return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<Masina>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
-  @RequestMapping(value="/persoana/{id}", method = RequestMethod.DELETE)
+  @RequestMapping(value="/Masina/{id}", method = RequestMethod.DELETE)
   public ResponseEntity remove(@PathVariable("id") int id) {
-    for(Persoana p : this.persoane) {
+    for(Masina p : this.masini) {
       if(p.getId() == id) {
-        this.persoane.remove(p);
+        this.masini.remove(p);
         return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NO_CONTENT);
       }
     }
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
 
   }
-@RequestMapping(value="/persoana/{id}", method = RequestMethod.PUT)
+@RequestMapping(value="/Masina/{id}", method = RequestMethod.PUT)
   public ResponseEntity update(@PathVariable("id") int id) {
-    for(Persoana p : this.persoane) {
+    for(Masina p : this.masini) {
       if(p.getId() == id) {
-    p.setName("Ionut");
-        return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
+    p.setName("Dacia");
+        return new ResponseEntity<Masina>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
 
-  @RequestMapping(value="/persoana", method = RequestMethod.POST)
+  @RequestMapping(value="/Masina", method = RequestMethod.POST)
   public ResponseEntity create() {
     
-  Persoana p = new Persoana(5,"Popescu");
-  this.persoane.add(p); 
+  Masina p = new Masina(5,"Maserati");
+this.masini.add(p); 
         return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
      
   }
