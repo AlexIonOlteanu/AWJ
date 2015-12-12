@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="blog">
 <head>
-  <title>My application</title>
+  <title>Tema 4 </title>
   <link rel="stylesheet" media="all" href="css/bootstrap.min.css">
   <link rel="stylesheet" media="all" href="css/custom.css">
 </head>
 <body>
   <div class="container">
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container-fluid" color = "red" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -21,8 +21,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Resource 1</a></li>
-            <li><a href="#">Resource 2</a></li>
+            <li class="btn btn-info" ><a href="#Persoana">Persoana</a></li>
+            <li class="btn btn-warning"><a href="#Produs">Produs</a></li>
+            <li class="btn btn-danger"><a href="#Masina">Masina</a></li>
           </ul>
         </div>
       </div>
@@ -34,7 +35,7 @@
   <div class="container">
     <div ng-controller="HomeController">
       <h1>{{ helloWorld }}</h1>
-      <p>Writing this live into the browser...</p>
+      <p></p>
     </div>
   </div>
 
@@ -42,21 +43,17 @@
 
   <!-- /resources1 -->
   <div class="container">
-    <h1>Resource 1</h1>
-    <h2>List all resources</h2>
+    <h1 id = "Persoana">Persoana</h1>
+    <h2>Lista de persoane</h2>
     <table class="table table-bordered">
       <tr>
-        <th>Attribute 1</th>
-        <th>Attribute 2</th>
-        <th>Attribute 3</th>
-        <th>Attribute 4</th>
+        <th>ID</th>
+        <th>Nume</th>
         <th style="width:210px;">Options</th>
       </tr>
       <tr>
-        <td>Lorem</td>
-        <td>Ipsum</td>
-        <td>Dolor</td>
-        <td>Sit</td>
+        <td>1</td>
+        <td>Ion</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -79,10 +76,8 @@
         </td>
       </tr>
       <tr>
-        <td>Ipsum</td>
-        <td>Lorem</td>
-        <td>Sit</td>
-        <td>Dolor</td>
+        <td>2</td>
+        <td>Pavem</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -105,10 +100,8 @@
         </td>
       </tr>
       <tr>
-        <td>Sit</td>
-        <td>Lorem</td>
-        <td>Ipsum</td>
-        <td>Dolor</td>
+        <td>3</td>
+        <td>Matei</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -131,10 +124,8 @@
         </td>
       </tr>
       <tr>
-        <td>Sit</td>
-        <td>Dolor</td>
-        <td>Lorem</td>
-        <td>Ipsum</td>
+        <td>5</td>
+        <td>Popescu</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -159,79 +150,48 @@
     </table>
 
     <div class="row">
-      <div class="col-md-3">
-        <h2>Edit a resource1</h2>
+      <div class="col-md-4">
+        <h2>Editeaza o persoana</h2>
         <form action="" method="">
           <div class="form-group">
-            <label for="attribute1">Attribute 1</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
           </div>
           <div class="form-group">
-            <label for="attribute2">Attribute 2</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Nume">
           </div>
-          <div class="form-group">
-            <label for="attribute3">Attribute 3</label>
-            <input type="text" class="form-control" id="attribute3" placeholder="Attribute 3">
-          </div>
-          <div class="form-group">
-            <label for="attribute4">Attribute 4</label>
-            <input type="text" class="form-control" id="attribute4" placeholder="Attribute 4">
-          </div>
-          <button type="submit" class="btn btn-info">Save</button>
+          <button type="submit" class="btn btn-info">Salveaza</button>
         </form>
       </div>
 
 
-      <div class="col-md-3 col-md-offset-6">
-        <h2>Add a resource1</h2>
+      <div class="col-md-4 col-md-offset-4">
+        <h2>Adauga o persoana</h2>
         <form action="" method="">
           <div class="form-group">
-            <label for="attribute1">Attribute 1</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
           </div>
           <div class="form-group">
-            <label for="attribute2">Attribute 2</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+            <label for="attribute2">Nume</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Nume">
           </div>
-          <div class="form-group">
-            <label for="attribute3">Attribute 3</label>
-            <input type="text" class="form-control" id="attribute3" placeholder="Attribute 3">
-          </div>
-          <div class="form-group">
-            <label for="attribute4">Attribute 4</label>
-            <input type="text" class="form-control" id="attribute4" placeholder="Attribute 4">
-          </div>
-          <button type="submit" class="btn btn-success">Add</button>
+          <button type="submit" class="btn btn-success">Adauga</button>
         </form>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <h2>Show a resource1</h2>
+        <h2>Persoana</h2>
       </div>
       <div class="col-md-2">
-        <img src="http://lorempixel.com/200/200/technics/?id=1" class="img-thumbnail"/>
+        <img src="http://www.ipedia.ro/o_stiri/274.jpg" class="img-thumbnail"/>
       </div>
       <div class="col-md-10">
-        <h1>Attribute 1</h1>
-        <p>Attribute 2, Attribute 3</p>
-        <h3>Sub resource</h3>
-        <table class="table table-bordered table-striped">
-          <tr>
-            <th>Attribute 5</th>
-            <th>Attribute 6</th>
-          </tr>
-          <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem</td>
-          </tr>
-          <tr>
-            <td>Lorem ipsum dolor</td>
-            <td>Sir</td>
-          </tr>
-        </table>
+        <h1>Ion</h1>
+        <p>1</p>
       </div>
     </div>
   </div>
@@ -240,17 +200,17 @@
 
   <!-- /resources2-->
   <div class="container">
-    <h1>Resource 2</h1>
-    <h2>List all resources</h2>
+    <h1 id = "Produs">Produs</h1>
+    <h2>Lista produselor</h2>
     <table class="table table-bordered">
       <tr>
-        <th>Attribute 1</th>
-        <th>Attribute 2</th>
+        <th>ID</th>
+        <th>Denumire</th>
         <th style="width:210px;">Options</th>
       </tr>
       <tr>
-        <td>Lorem</td>
-        <td>Sit</td>
+        <td>1</td>
+        <td>AdriaCola</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -273,8 +233,8 @@
         </td>
       </tr>
       <tr>
-        <td>Ipsum</td>
-        <td>Lorem</td>
+        <td>2</td>
+        <td>Cola</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -297,8 +257,8 @@
         </td>
       </tr>
       <tr>
-        <td>Sit</td>
-        <td>Dolor</td>
+        <td>3</td>
+        <td>Sprite</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -321,8 +281,8 @@
         </td>
       </tr>
       <tr>
-        <td>Lorem</td>
-        <td>Ipsum</td>
+        <td>5</td>
+        <td>Pepsi</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -347,73 +307,195 @@
     </table>
 
     <div class="row">
-      <div class="col-md-3">
-        <h2>Edit a resource2</h2>
+      <div class="col-md-4 ">
+        <h2>Editeaza un produsus</h2>
         <form action="" method="">
           <div class="form-group">
-            <label for="attribute1">Attribute 1</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
           </div>
           <div class="form-group">
-            <label for="attribute2">Attribute 2</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+            <label for="attribute2">Denumire</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Denumire">
           </div>
-          <button type="submit" class="btn btn-info">Save</button>
+          <button type="submit" class="btn btn-info">Salveaza</button>
         </form>
       </div>
 
 
-      <div class="col-md-3 col-md-offset-6">
-        <h2>Add a resource2</h2>
+      <div class="col-md-4 col-md-offset-4">
+        <h2>Adauga un produs</h2>
         <form action="" method="">
           <div class="form-group">
-            <label for="attribute1">Attribute 1</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="Attribute 1">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
           </div>
           <div class="form-group">
-            <label for="attribute2">Attribute 2</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Attribute 2">
+            <label for="attribute2">Denumire</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Denumire">
           </div>
-          <button type="submit" class="btn btn-success">Add</button>
+          <button type="submit" class="btn btn-success">Adauga</button>
         </form>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <h2>Show a resource2</h2>
+        <h2>Produsul</h2>
       </div>
       <div class="col-md-2">
-        <img src="http://lorempixel.com/200/200/technics/?id=2" class="img-thumbnail"/>
+        <img src="http://www.carrefour-online.ro/-/media/Images/Products/5/4/4/N1_5942207003505.png?w=460&h=460&q=90&bc=white" class="img-thumbnail"/>
       </div>
       <div class="col-md-10">
-        <h1>Attribute 1</h1>
-        <p>Attribute 2, Attribute 3</p>
-        <h3>Sub resource</h3>
-        <table class="table table-bordered table-striped">
-          <tr>
-            <th>Attribute 5</th>
-            <th>Attribute 6</th>
-          </tr>
-          <tr>
-            <td>Lorem ipsum</td>
-            <td>Lorem</td>
-          </tr>
-          <tr>
-            <td>Lorem ipsum dolor</td>
-            <td>Sir</td>
-          </tr>
-        </table>
+        <h1>AdriaCola</h1>
+        <p>1</p>
       </div>
     </div>
   </div>
 
   <hr/>
+    
+    
+    
+    
+    
+    
+ <div class="container">
+    <h1 id = "Masina">Masina</h1>
+    <h2>Lista produselor</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Marca</th>
+        <th style="width:210px;">Options</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Toyota</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>BMV</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Bugatti</td>
+        <td>
+          <a href="">
+            <span class="label label-success">
+              Open
+              <span class="glyphicon glyphicon-folder-open"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-primary">
+              Edit
+              <span class="glyphicon glyphicon-edit"></span>
+            </span>
+          </a>
+          <a href="">
+            <span class="label label-danger">
+              Remove
+              <span class="glyphicon glyphicon-remove"></span>
+            </span>
+          </a>
+        </td>
+      </tr>
+    </table>
 
+    <div class="row">
+      <div class="col-md-4 ">
+        <h2>Editeaza o masina</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Marca</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Marca">
+          </div>
+          <button type="submit" class="btn btn-info">Salveaza</button>
+        </form>
+      </div>
+
+
+      <div class="col-md-4 col-md-offset-4">
+        <h2>Adauga un produs</h2>
+        <form action="" method="">
+          <div class="form-group">
+            <label for="attribute1">ID</label>
+            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+          </div>
+          <div class="form-group">
+            <label for="attribute2">Marca</label>
+            <input type="text" class="form-control" id="attribute2" placeholder="Marca">
+          </div>
+          <button type="submit" class="btn btn-success">Adauga</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Produsul</h2>
+      </div>
+      <div class="col-md-2">
+        <img src="http://www.toyota.com.au/static/images/toyota_icon.png" class="img-thumbnail"/>
+      </div>
+      <div class="col-md-10">
+        <h1>Toyota</h1>
+        <p>1</p>
+      </div>
+    </div>
+  </div>
+
+<hr/>    
+    
   <div class="container">
     <footer class="footer">
       <p class="text-muted pull-left">AWJ Base Project &copy; 2015-2016</p>
-      <p class="text-muted pull-right">Sirbu Nicolae-Cezar, 331AA</p>
+      <p class="text-muted pull-right">Olteanu Ion Alexandru, 331AB</p>
     </footer>
   </div>
 
