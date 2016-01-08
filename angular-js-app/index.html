@@ -33,7 +33,7 @@
   <hr/>
 
   <div class="container">
-    <div ng-controller="HomeController">
+    <div>
       <h1>{{ helloWorld }}</h1>
       <p></p>
     </div>
@@ -42,7 +42,7 @@
   <hr/>
 
   <!-- /resources1 -->
-  <div class="container">
+  <div class="container"  ng-controller="PersoanaController">
     <h1 id = "Persoana">Persoana</h1>
     <h2>Lista de persoane</h2>
     <table class="table table-bordered">
@@ -51,81 +51,9 @@
         <th>Nume</th>
         <th style="width:210px;">Options</th>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>Ion</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Pavem</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Matei</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Popescu</td>
+      <tr ng-repeat="persoana in persoane">
+        <td>{{persoana.id}}</td>
+        <td>{{persoana.name}}</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -199,7 +127,7 @@
   <hr/>
 
   <!-- /resources2-->
-  <div class="container">
+  <div class="container" ng-controller="ProdusController">
     <h1 id = "Produs">Produs</h1>
     <h2>Lista produselor</h2>
     <table class="table table-bordered">
@@ -208,81 +136,9 @@
         <th>Denumire</th>
         <th style="width:210px;">Options</th>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>AdriaCola</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Cola</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Sprite</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Pepsi</td>
+      <tr ng-repeat="Produs in produse">
+        <td>{{Produs.id}}</td>
+        <td>{{Produs.name}}</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -360,7 +216,7 @@
     
     
     
- <div class="container">
+ <div class="container" ng-controller="MasinaController">
     <h1 id = "Masina">Masina</h1>
     <h2>Lista produselor</h2>
     <table class="table table-bordered">
@@ -369,9 +225,9 @@
         <th>Marca</th>
         <th style="width:210px;">Options</th>
       </tr>
-      <tr>
-        <td>1</td>
-        <td>Toyota</td>
+      <tr ng-repeat="Masina in masini">
+        <td>{{Masina.id}}</td>
+        <td>{{Masina.name}}</td>
         <td>
           <a href="">
             <span class="label label-success">
@@ -392,55 +248,6 @@
             </span>
           </a>
         </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>BMV</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Bugatti</td>
-        <td>
-          <a href="">
-            <span class="label label-success">
-              Open
-              <span class="glyphicon glyphicon-folder-open"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-primary">
-              Edit
-              <span class="glyphicon glyphicon-edit"></span>
-            </span>
-          </a>
-          <a href="">
-            <span class="label label-danger">
-              Remove
-              <span class="glyphicon glyphicon-remove"></span>
-            </span>
-          </a>
-        </td>
-      </tr>
     </table>
 
     <div class="row">
