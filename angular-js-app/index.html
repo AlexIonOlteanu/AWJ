@@ -135,6 +135,9 @@
 
   <hr/>
 
+      
+      
+      
   <!-- /resources2-->
   <div class="container" ng-controller="ProdusController">
     <h1 id = "Produs">Produs</h1>
@@ -156,13 +159,13 @@
             </span>
           </a>
           <a href="">
-            <span class="label label-primary">
+            <span class="label label-primary" ng-click="setUpdateProdus(Produs)">
               Edit
               <span class="glyphicon glyphicon-edit"></span>
             </span>
           </a>
           <a href="">
-            <span class="label label-danger">
+            <span class="label label-danger" ng-click="deleteProdus(Produs.id)">
               Remove
               <span class="glyphicon glyphicon-remove"></span>
             </span>
@@ -177,13 +180,13 @@
         <form action="" method="">
           <div class="form-group">
             <label for="attribute1">ID</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+            <input type="text"  class="form-control" ng-model="editPro.id" placeholder="ID">
           </div>
           <div class="form-group">
             <label for="attribute2">Denumire</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Denumire">
+            <input type="text" class="form-control" ng-model="editPro.name" placeholder="Denumire">
           </div>
-          <button type="submit" class="btn btn-info">Salveaza</button>
+          <button ng-click="updateProdus()" class="btn btn-info">Salveaza</button>
         </form>
       </div>
 
@@ -193,11 +196,11 @@
         <form action="" method="">
           <div class="form-group">
             <label for="attribute1">ID</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+            <input type="text" class="form-control" ng-model="Produs.id" placeholder="ID">
           </div>
           <div class="form-group">
             <label for="attribute2">Denumire</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Denumire">
+            <input type="text" class="form-control" ng-model="Produs.name" placeholder="Denumire">
           </div>
           <button type="submit" class="btn btn-success">Adauga</button>
         </form>
@@ -227,7 +230,7 @@
     
  <div class="container" ng-controller="MasinaController">
     <h1 id = "Masina">Masina</h1>
-    <h2>Lista produselor</h2>
+    <h2>Lista masinilor</h2>
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
@@ -245,13 +248,13 @@
             </span>
           </a>
           <a href="">
-            <span class="label label-primary">
+            <span class="label label-primary" ng-click="setUpdateMasina(Masina)">
               Edit
               <span class="glyphicon glyphicon-edit"></span>
             </span>
           </a>
           <a href="">
-            <span class="label label-danger">
+            <span class="label label-danger" ng-click="deleteMasina(Masina.id)">
               Remove
               <span class="glyphicon glyphicon-remove"></span>
             </span>
@@ -265,27 +268,27 @@
         <form action="" method="">
           <div class="form-group">
             <label for="attribute1">ID</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+            <input type="text" class="form-control" ng-model="editMa.id" placeholder="ID">
           </div>
           <div class="form-group">
             <label for="attribute2">Marca</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Marca">
+            <input type="text" class="form-control" ng-model="editMa.name" placeholder="Marca">
           </div>
-          <button type="submit" class="btn btn-info">Salveaza</button>
+          <button ng-click="addMasina(Masina)" class="btn btn-info">Salveaza</button>
         </form>
       </div>
 
 
       <div class="col-md-4 col-md-offset-4">
-        <h2>Adauga un produs</h2>
+        <h2>Adauga o masina</h2>
         <form action="" method="">
           <div class="form-group">
             <label for="attribute1">ID</label>
-            <input type="text" class="form-control" id="attribute1" placeholder="ID">
+            <input type="text" class="form-control" ng-model="Masina.id" placeholder="ID">
           </div>
           <div class="form-group">
             <label for="attribute2">Marca</label>
-            <input type="text" class="form-control" id="attribute2" placeholder="Marca">
+            <input type="text" class="form-control" ng-model="Masina.name" placeholder="Marca">
           </div>
           <button type="submit" class="btn btn-success">Adauga</button>
         </form>

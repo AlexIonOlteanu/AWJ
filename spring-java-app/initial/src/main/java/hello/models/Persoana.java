@@ -1,4 +1,4 @@
-package hello;
+package hello.models;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -20,6 +20,10 @@ public class Persoana {
 
   public int getId() {
     return this.id;
+  }
+    
+  public void setId(int id){
+      this.id=id;
   }
   public void setName(String name){
 	  this.name=name;
