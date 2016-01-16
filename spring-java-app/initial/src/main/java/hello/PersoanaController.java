@@ -52,11 +52,11 @@ public class PersoanaController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
 
   }
-@RequestMapping(value="/persoana/{id}", method = RequestMethod.PUT)
-  public ResponseEntity update(@PathVariable("id") int id) {
+@RequestMapping(value="/persoana/{id}/{name}", method = RequestMethod.PUT)
+  public ResponseEntity update(@PathVariable("id") int id,@PathVariable("name") String nume) {
     for(Persoana p : this.persoane) {
       if(p.getId() == id) {
-    p.setName("Ionut");
+    p.setName("name");
         return new ResponseEntity<Persoana>(p, new HttpHeaders(), HttpStatus.OK);
       }
     }
@@ -64,16 +64,9 @@ public class PersoanaController {
   }
 
 
-  @RequestMapping(value="/persoana", method = RequestMethod.POST)
-  public ResponseEntity create() {
-    
-  Persoana p = new Persoana(5,"Popescu");
-  this.persoane.add(p); 
-        return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
-     
-  }
+  
     @RequestMapping(value="/persoana/{id}/{name}", method = RequestMethod.POST)
-  public ResponseEntity create1(@PathVariable("id") int id,
+  public ResponseEntity create(@PathVariable("id") int id,
 								@PathVariable("name") String name)
   {
     
